@@ -1,4 +1,4 @@
-# big-project
+# big-project, but little to only practice vue
 
 ## Project setup
 ```
