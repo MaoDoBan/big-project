@@ -1,6 +1,6 @@
 <template>
-  <h1>{{ title }}</h1><br>
-  <Modal titulo="Bah" texto="tchê"/>
+  <h1>{{ projeto }}</h1><br>
+  <Modal :titulo="modal.titulo" :texto="modal.texto"/>
 </template>
 
 <script>
@@ -11,7 +11,11 @@ export default {
   components: { Modal },
   data(){
     return {
-      title: "Big Project"
+      projeto: "Big Project",
+      modal: {
+        titulo: "Nada para ver aqui",
+        texto:  "Vá embora!"
+      }
     };
   }
 }
