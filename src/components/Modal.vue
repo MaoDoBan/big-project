@@ -1,6 +1,6 @@
 <template>
   <div class="backdrop">
-    <div class="modal">
+    <div class="modal" :class="{ azul: tema === 'azul' }">
       <h1>{{ modal.título }}</h1>
       <p> {{ modal.texto }}</p>
     </div>
@@ -10,7 +10,7 @@
 
 <script>
   export default{
-    props: ["modal"]
+    props: ["modal", "tema"]
   }
 </script>
 
@@ -22,6 +22,9 @@
     margin: 100px auto;
     background: white;
     border-radius: 10px;
+  }
+  .azul{
+    background: darkblue;
   }
   .backdrop{
     top: 0;

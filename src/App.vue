@@ -1,6 +1,6 @@
 <template>
   <h1>{{ projeto }}</h1><br>
-  <Modal :modal="modal"/>
+  <Modal :modal="modal" tema="azul"/>
 </template>
 
 <script>
