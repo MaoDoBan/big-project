@@ -1,6 +1,6 @@
 <template>
   <h1>{{ title }}</h1><br>
-  <Modal/>
+  <Modal titulo="Bah" texto="tchê"/>
 </template>
 
 <script>

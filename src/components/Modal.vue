@@ -1,10 +1,18 @@
 <template>
   <div class="backdrop">
     <div class="modal">
-      <p>modal content</p>
+      <h1>{{ titulo }}</h1>
+      <p>{{ texto }}</p>
     </div>
   </div>
 </template>
+
+
+<script>
+  export default{
+    props: ["titulo", "texto"]
+  }
+</script>
 
 
 <style>
