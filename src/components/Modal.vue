@@ -1,8 +1,8 @@
 <template>
   <div class="backdrop">
     <div class="modal">
-      <h1>{{ titulo }}</h1>
-      <p>{{ texto }}</p>
+      <h1>{{ modal.título }}</h1>
+      <p> {{ modal.texto }}</p>
     </div>
   </div>
 </template>
@@ -10,7 +10,7 @@
 
 <script>
   export default{
-    props: ["titulo", "texto"]
+    props: ["modal"]
   }
 </script>
 

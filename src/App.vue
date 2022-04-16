@@ -1,6 +1,6 @@
 <template>
   <h1>{{ projeto }}</h1><br>
-  <Modal :titulo="modal.titulo" :texto="modal.texto"/>
+  <Modal :modal="modal"/>
 </template>
 
 <script>
@@ -13,7 +13,7 @@ export default {
     return {
       projeto: "Big Project",
       modal: {
-        titulo: "Nada para ver aqui",
+        título: "Nada para ver aqui",
         texto:  "Vá embora!"
       }
     };
