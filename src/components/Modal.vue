@@ -23,7 +23,7 @@
     background: white;
     border-radius: 10px;
   }
-  .azul{
+  .modal.azul{
     background: darkblue;
   }
   .backdrop{
