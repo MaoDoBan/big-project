@@ -1,6 +1,9 @@
 <template>
   <h1>{{ projeto }}</h1><br>
-  <Modal v-if="showModal" :modal="modal" tema="azul" @toggle="toggleModal"/>
+  <Modal v-if="showModal" tema="azul" @toggle="toggleModal">
+    <h1>{{ modal.título }}</h1>
+    <p> {{ modal.texto }}</p>
+  </Modal>
   <button @click="toggleModal">Mostrar Modal</button>
 </template>
 

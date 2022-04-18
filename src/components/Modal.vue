@@ -1,8 +1,7 @@
 <template>
   <div class="backdrop" @click.self="toggleModal">
     <div class="modal" :class="{ azul: tema === 'azul' }">
-      <h1>{{ modal.título }}</h1>
-      <p> {{ modal.texto }}</p>
+      <slot></slot>
     </div>
   </div>
 </template>
@@ -10,7 +9,7 @@
 
 <script>
 export default{
-  props: ["modal", "tema"],
+  props: ["tema"],
   methods: {
     toggleModal(){
       this.$emit("toggle");
