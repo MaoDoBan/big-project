@@ -1,6 +1,7 @@
 <template>
   <h1>{{ projeto }}</h1><br>
-  <Modal :modal="modal" tema="azul"/>
+  <Modal v-if="showModal" :modal="modal" tema="azul" @toggle="toggleModal"/>
+  <button @click="toggleModal">Mostrar Modal</button>
 </template>
 
 <script>
@@ -15,8 +16,14 @@ export default {
       modal: {
         título: "Nada para ver aqui",
         texto:  "Vá embora!"
-      }
+      },
+      showModal: false
     };
+  },
+  methods: {
+    toggleModal(){
+      this.showModal = !this.showModal;
+    }
   }
 }
 </script>
