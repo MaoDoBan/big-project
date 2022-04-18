@@ -2,6 +2,9 @@
   <div class="backdrop" @click.self="toggleModal">
     <div class="modal" :class="{ azul: tema === 'azul' }">
       <slot></slot>
+      <div class="bah">
+        <slot name="bah"></slot>
+      </div>
     </div>
   </div>
 </template>

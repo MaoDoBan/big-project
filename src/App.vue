@@ -3,6 +3,9 @@
   <Modal v-if="showModal" tema="azul" @toggle="toggleModal">
     <h1>{{ modal.título }}</h1>
     <p> {{ modal.texto }}</p>
+    <template v-slot:bah>
+      <a href="#">BAH</a>
+    </template>
   </Modal>
   <button @click="toggleModal">Mostrar Modal</button>
 </template>
