@@ -1,12 +1,14 @@
 <template>
   <h1>{{ projeto }}</h1><br>
-  <Modal v-if="showModal" tema="azul" @toggle="toggleModal">
-    <h1>{{ modal.título }}</h1>
-    <p> {{ modal.texto }}</p>
-    <template v-slot:bah>
-      <a href="#">BAH</a>
-    </template>
-  </Modal>
+  <teleport to="#modal-aqui">
+    <Modal v-if="showModal" tema="azul" @toggle="toggleModal">
+      <h1>{{ modal.título }}</h1>
+      <p> {{ modal.texto }}</p>
+      <template v-slot:bah>
+        <a href="#">BAH</a>
+      </template>
+    </Modal>
+  </teleport>
   <button @click="toggleModal">Mostrar Modal</button>
 </template>
 
@@ -35,7 +37,7 @@ export default {
 </script>
 
 <style>
-#app {
+#app, #modal-aqui{
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
